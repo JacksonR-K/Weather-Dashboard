@@ -1,10 +1,18 @@
 var savedCitiesEl = document.querySelector('#saved-cities');
 var currentWeatherEl = document.querySelector('#current-weather');
 var futureWeatherEl = document.querySelector('#future-weather');
+var searchBtnEl = document.querySelector('#search-btn');
+
+searchBtnEl.addEventListener('click', function() {
+    var city = document.getElementById('city').value;
+    console.log(city);
+    getCurrentWeather(city);
+    getFutureWeather(city);
+})
 
 getSavedCities();
-getCurrentWeather();
-getFutureWeather();
+getCurrentWeather('Toronto');
+getFutureWeather('Toronto');
 
 function getSavedCities() {
     if (localStorage.getItem('savedCities') !== null) {
@@ -18,8 +26,8 @@ function getSavedCities() {
     }
 }
 
-function getCurrentWeather() {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Toronto&units=imperial&appid=4eb2c9d3c5a077df7c67856cbfab5941', {
+function getCurrentWeather(city) {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=4eb2c9d3c5a077df7c67856cbfab5941', {
 
 })
     .then(function (response) {
@@ -30,8 +38,8 @@ function getCurrentWeather() {
     });
 }
  
-function getFutureWeather() {
-    fetch('https://api.openweathermap.org/data/2.5/forecast?q=Toronto&units=imperial&appid=4eb2c9d3c5a077df7c67856cbfab5941', {
+function getFutureWeather(city) {
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=imperial&appid=4eb2c9d3c5a077df7c67856cbfab5941', {
 
 })
     .then(function (response) {
