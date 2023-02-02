@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body class="container-fluid">
+    <header class="bg-primary">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div class="row">
+        <aside id="city-search" class="col-2">
+            <h2>Search for a City:</h2>
+            <input type="text" id="city" class="w-100">
+            <button type="button" class="bg-primary w-100 my-2">Search</button>
+            <div id="saved-cities">
+                <!--Saved cities are created in JavaScript from the local storage if any exist-->
+            </div>
+        </aside>
+        <main id="weather-display" class="col-9">
+            <section id="current-weather" class="card">
+                <!--Current weather card contents are created in JavaScript and populated from a call to OpenWeather's API-->
+            </section>
+            <section id="future-weather" class="row justify-content-center text-white">
+                <!--Future weather cards are created in JavaScript and populated from a call to OpenWeather's API-->
+            </section>
+        </main>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
