@@ -16,17 +16,56 @@
         <aside id="city-search" class="col-2">
             <h2>Search for a City:</h2>
             <input type="text" id="city" class="w-100">
-            <button type="button" class="bg-primary w-100 my-2">Search</button>
+            <button type="button" id="search-btn" class="bg-primary w-100 my-2">Search</button>
             <div id="saved-cities">
                 <!--Saved cities are created in JavaScript from the local storage if any exist-->
             </div>
         </aside>
-        <main id="weather-display" class="col-9">
+        <main id="weather-display" class="col-10">
             <section id="current-weather" class="card">
-                <!--Current weather card contents are created in JavaScript and populated from a call to OpenWeather's API-->
+                <h2></h2> <!--Current Date/Time-->
+                <img> <!--Weather Icon-->
+                <p></p> <!--Temperature-->
+                <p></p> <!--Wind Speed-->
+                <p></p> <!--Humidity-->
             </section>
-            <section id="future-weather" class="row justify-content-center text-white">
-                <!--Future weather cards are created in JavaScript and populated from a call to OpenWeather's API-->
+            <h2>5 Day Forecast:</h2>
+            <section id="future-weather" class="row justify-content-around text-white">
+                <div class="card">
+                    <h2></h2> <!--Future Date-->
+                    <img> <!--Weather Icon-->
+                    <p></p> <!--Temperature-->
+                    <p></p> <!--Wind Speed-->
+                    <p></p> <!--Humidity-->
+                </div>
+                <div class="card">
+                    <h2></h2> <!--Future Date-->
+                    <img> <!--Weather Icon-->
+                    <p></p> <!--Temperature-->
+                    <p></p> <!--Wind Speed-->
+                    <p></p> <!--Humidity-->
+                </div>
+                <div class="card">
+                    <h2></h2> <!--Future Date-->
+                    <img> <!--Weather Icon-->
+                    <p></p> <!--Temperature-->
+                    <p></p> <!--Wind Speed-->
+                    <p></p> <!--Humidity-->
+                </div>
+                <div class="card">
+                    <h2></h2> <!--Future Date-->
+                    <img> <!--Weather Icon-->
+                    <p></p> <!--Temperature-->
+                    <p></p> <!--Wind Speed-->
+                    <p></p> <!--Humidity-->
+                </div>
+                <div class="card">
+                    <h2></h2> <!--Future Date-->
+                    <img> <!--Weather Icon-->
+                    <p></p> <!--Temperature-->
+                    <p></p> <!--Wind Speed-->
+                    <p></p> <!--Humidity-->
+                </div>
             </section>
         </main>
     </div>

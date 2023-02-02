@@ -3,6 +3,16 @@ h1 {
     padding-right: 30%;
 }
 
+img {
+    width: 100px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 0;
+    padding: 1em;
+}
+
 #future-weather .card {
     background-color: #032c60;
 }
